@@ -4,6 +4,8 @@ import Home from './screens/home';
 import ReviewDetail from './screens/reviewDetails';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
+// import Navigator from './routes/homeStack';
+import RootNavigator from './routes/drawer';
 
 const getFonts = () => {
   return (
@@ -18,7 +20,7 @@ const App = () => {
   const [fontLoaded, setFontLoaded] = useState(false);
   if (fontLoaded) {
     return (
-      <Home />
+      <RootNavigator />
     );
   }
   else {
