@@ -33,18 +33,20 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/home";
 import ReviewDetail from "../screens/reviewDetails";
+import Header from '../shared/Header'
 
 const { Navigator, Screen } = createStackNavigator();
 
-const HomeStack = () => (
+const HomeStack = ({navigation}) => (
   <Navigator headerMode="float">
     {/* //other options: "float", "screen" default= */}
     <Screen name="Home"
       component={Home}
       options={{
-        title: 'Home',
-        headerStyle: { backgroundColor: 'pink' },
+        // title: 'Home',
+        // headerStyle: { backgroundColor: 'yellow' },
         // headerTintColor: 'blue',
+        headerTitle: () => <Header navigation={navigation} title='Home'/>
       }}
     />
     <Screen name="ReviewDetails"
