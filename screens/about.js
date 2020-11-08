@@ -1,11 +1,15 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import globalStyles from '../styles/global';
+import {globalStyles} from '../styles/global';
+import Card from '../shared/Card';
 
 export default function About() {
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.title} >About Screen</Text>
+      <Card>
+        <Text style={globalStyles.title} >About Screen</Text>
+      </Card>
+      
     </View>
   );
 }
